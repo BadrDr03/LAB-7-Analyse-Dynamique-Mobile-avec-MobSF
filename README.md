@@ -47,31 +47,8 @@ Vérification : L’image ne contient aucun Play Store. C’est exactement ce qu
 ![Import OVA](https://github.com/user-attachments/assets/cd3efd23-163b-4b52-8b53-938b6fa7d0ee")
 
 ---
-Étape 2 : Cloner MobSF pour utiliser les scripts AVD officiels 
-
-Ouvrez un terminal / invite de commandes et tapez :
-
-git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
-cd Mobile-Security-Framework-MobSF
-
-![Import OVA](https://github.com/user-attachments/assets/2a82371d-0681-466d-9e2e-bd24aeb81fb2)
-
----
 
 Étape 3 : Lancement de l’émulateur avec le script MobSF (rooté & prêt pour l’analyse)
-
-![import OVA](https://github.com/user-attachments/assets/2f36ed0f-037d-40c2-a14d-39aeba755bbf)
-
-
-Dans cette étape, nous avons lancé un émulateur Android configuré pour l’analyse dynamique à l’aide de MobSF.
-
-Le script start_avd.ps1 permet de :
-
-Lister les AVD (Android Virtual Devices) disponibles
-
-Démarrer un émulateur compatible avec MobSF
-
-Préparer l’environnement pour l’analyse dynamique (root, monitoring, etc...)
 
 ![Import OVA](https://github.com/user-attachments/assets/22f80d08-1f85-46c9-8a44-810f157bd312)
 
