@@ -44,7 +44,7 @@ Cliquez Download si besoin → Next → Finish.
 Nommez l’AVD : MobSF_DIVA_API_30 (ou similaire).
 Vérification : L’image ne contient aucun Play Store. C’est exactement ce qu’on veut.
 
-![Import OVA](https://github.com/user-attachments/assets/cd3efd23-163b-4b52-8b53-938b6fa7d0ee")
+![Import OVA](https://github.com/user-attachments/assets/5172b2f8-30ec-4524-92f6-ae36ea2fcd7a)
 
 ---
 
