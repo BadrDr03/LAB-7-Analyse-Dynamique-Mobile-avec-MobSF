@@ -9,19 +9,17 @@ Apprendre à détecter des vulnérabilités en temps réel (stockage insecure, i
 
 ---
 
-Nature de l’émulateur (AVD sans Play Store)
-L’émulateur est un Android Virtual Device (AVD) créé avec Android Studio. C’est une machine virtuelle qui simule parfaitement un vrai smartphone Android sur votre PC (CPU, mémoire, écran, capteurs, etc.).
-Pourquoi « sans Play Store » ?
-Quand vous créez un AVD, vous avez le choix entre :
-Images Google Play → Play Store + Google Services préinstallés (bloat, processus en arrière-plan, interférences réseau).
-Images Android pur (ou Google APIs sans Play) → environnement clean, sans aucun service Google.
-Avantages pour l’analyse de sécurité (raison pour laquelle on l’utilise ici) :
-Pas de bruit de fond (Google Play Services, Firebase, etc.) → les logs et le trafic réseau sont purs.
-MobSF peut appliquer son proxy HTTPS global sans conflit.
-L’émulateur est non-production et facilement compatible avec le rooting/Frida (MobSF exige un émulateur rooté pour l’analyse dynamique complète).
-Performances optimales sur x86_64 (votre PC).
-Limite : jusqu’à Android API 30 (MobSF ne supporte pas les versions plus récentes pour l’instant car /system n’est plus writable).
-MobSF lance automatiquement Frida Server, installe son certificat CA pour intercepter le HTTPS, et capture tout ce que fait l’application en temps réel.
+Au lieu de l'AVD standard d'Android Studio (souvent sujet à des erreurs de corruption d'images), nous utilisons Genymotion (basé sur VirtualBox) pour sa légèreté et sa stabilité.
+
+Configuration de l'appareil :
+
+Modèle : Google Pixel 5.
+
+Version Android : 11.0 (API 30).
+
+Pourquoi API 30 ? C’est la version maximale supportée par MobSF pour l’analyse dynamique (car les versions supérieures restreignent l’accès en écriture à la partition /system).
+
+Root natif : L’appareil est rooté par défaut, ce qui est indispensable pour l’instrumentation Frida.
 
 ---
 
@@ -61,6 +59,7 @@ L'émulateur est désormais détecté par l'hôte via ADB. Cette étape confirme
 Identifiant de l'appareil : > * Commande : adb devices
 
 Identifiant : 192.168.56.101:5555
+
 
 
 
