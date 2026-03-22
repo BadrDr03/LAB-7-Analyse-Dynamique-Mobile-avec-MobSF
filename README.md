@@ -44,7 +44,7 @@ Cliquez Download si besoin → Next → Finish.
 Nommez l’AVD : MobSF_DIVA_API_30 (ou similaire).
 Vérification : L’image ne contient aucun Play Store. C’est exactement ce qu’on veut.
 
-![Import OVA](https://github.com/user-attachments/assets/4177d1e4-7027-4c66-bb30-97ac8c903cc1)
+![Import OVA](https://github.com/user-attachments/assets/cd3efd23-163b-4b52-8b53-938b6fa7d0ee")
 
 ---
 Étape 2 : Cloner MobSF pour utiliser les scripts AVD officiels 
@@ -72,6 +72,19 @@ Lister les AVD (Android Virtual Devices) disponibles
 Démarrer un émulateur compatible avec MobSF
 
 Préparer l’environnement pour l’analyse dynamique (root, monitoring, etc...)
+
+![Import OVA](https://github.com/user-attachments/assets/22f80d08-1f85-46c9-8a44-810f157bd312)
+
+Optimisation de l'interface et Validation ADB
+Après le premier démarrage réussi de l'instance MobSF_Geny_API_30, nous avons ajusté la densité d'affichage (DPI) dans les paramètres Android pour une meilleure visibilité des éléments lors de l'analyse dynamique.
+
+Validation finale de l'environnement :
+L'émulateur est désormais détecté par l'hôte via ADB. Cette étape confirme que le tunnel réseau entre Genymotion (VirtualBox) et le système hôte est opérationnel.
+
+Identifiant de l'appareil : > * Commande : adb devices
+
+Identifiant : 192.168.56.101:5555
+
 
 
 
